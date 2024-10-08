@@ -6,26 +6,27 @@ import { isEmpty } from '../components/Routes/Utils';
 import Card from '../components/Post/Card';
 import Trends from '../components/Trends';
 import FriendHint from '../components/Profil/FriendsHint';
+import Navbar from '../components/Navbar';
 
 const Trending = () => {
- const uid = useContext(UidContext);
- const trendList = useSelector((state) => state.trendingReducer);
+    const uid = useContext(UidContext);
+    const trendList = useSelector((state) => state.trendingReducer);
 
     return (
         <div className="trending-page">
-         <LeftNav />
-         <div calssName="main">
-         <ul>
-            {!isEmpty(trendList[0]) && trendList.map((post) => <Card post=
-            {post} key={post._id} />)}
-         </ul>
-        </div>
-        <div className="right-side">
-        <div className="right-side-container">
-            <Trends />
-            {uid && <FriendHint />}
-        </div>
-        </div>
+            <Navbar />
+            <div className="main">
+                <ul>
+                    {!isEmpty(trendList[0]) && trendList.map((post) => <Card post=
+                        {post} key={post._id} />)}
+                </ul>
+            </div>
+            <div className="right-side">
+                <div className="right-side-container">
+                    <Trends />
+                    {uid && <FriendHint />}
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,36 +1,78 @@
+/* Styles généraux */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+
+/* Conteneur principal */
 .trending-page {
-  max-width: 1200px;
-  margin: 62px auto 0;
-  display: grid;
-  grid-template-columns: 60px 1fr 374px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
 
-  @media screen and (max-width: 990px) {
-    grid-template-columns: 60px 1fr;
-    margin: 58px 20px 50px
+/* Section principale */
+.main {
+  width: 600px;
+}
+
+.main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Carte de post */
+.card {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Barre latérale droite */
+.right-side {
+  width: 300px;
+  margin-left: 20px;
+}
+
+/* Conteneur interne de la barre latérale */
+.right-side-container {
+  position: sticky;
+  top: 80px;
+}
+
+/* Wrapper pour les tendances et les suggestions d'amis */
+.wrapper {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.trends,
+.friend-hint {
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .right-side {
+    display: none;
   }
+}
 
-  @media screen and (max-width: 590px) {
-    grid-template-columns: 1fr;
-    margin: 58px 8px 50px;
+@media (max-width: 768px) {
+  .trending-page {
+    flex-direction: column;
+    align-items: center;
   }
 
   .main {
-    margin-top: -8px;
-  }
-
-  .right-side {
-    position: relative;
     width: 100%;
-    margin: 0px 0 0 14px;
-
-    .right-side-container {
-      position: fixed;
-      width: 35%;
-
-      @media screen and (min-width: 1200px) {
-        width: 404px;
-      }
-
-    }
+    padding: 0 10px;
   }
 }

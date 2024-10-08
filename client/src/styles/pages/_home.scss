@@ -1,88 +1,80 @@
+/* Styles généraux */
+body {
+  margin-top: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+
+/* Conteneur principal */
 .home {
-  display: grid;
-  max-width: 1200px;
-  grid-template-columns: 60px 1fr 374px;
-  overflow: hidden;
-  margin: 58px auto 50px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
 
-  @media screen and (max-width: 990px) {
-    grid-template-columns: 60px 1fr;
-    margin: 58px 20px 50px
-  }
 
-  @media screen and (max-width: 590px) {
-    grid-template-columns: 1fr;
-    margin: 58px 8px 50px;
-  }
 
-  .main {
-    .home-header {
-      margin: 0 auto 12px;
-      text-align: center;
+/* En-tête de la page d'accueil */
+.home-header {
+  margin-bottom: 20px;
+}
 
-      .connection-form {
-        background: $color-4;
-        border-radius: 20px;
-        padding: 20px;
+/* Formulaire de nouveau post et connexion */
+.new-post-form,
+.log {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        ul {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 18px;
+/* Fil de discussion */
+.thread {
+  margin-bottom: 20px;
+}
 
-          li {
-            cursor: pointer;
-            border-radius: 20px;
-            padding: 12px 14px;
-            transition: .2s;
-            margin: 0 8px;
-          }
-          .active-btn {
-            background: $color-1;
+/* Barre latérale droite */
+.right-side {
+  width: 300px;
+  margin-left: 20px;
+}
 
-            &:hover {
-              background: $color-2;
-            }
-          }
-          li:not(.active-btn) {
-            &:hover {
-              transform: translateX(3px)
-            }
-          }
-        }
-        form {
-          input {
-            padding: 10px 14px;
-            margin: 0;
-            font-size: 1.2rem;
-            font-family: $font-2;
-            border-radius: 20px;
+/* Conteneur interne de la barre latérale */
+.right-side-container {
+  position: sticky;
+  top: 80px;
+}
 
-            &:focus {
-              box-shadow: 0 0 3px rgba(51, 51, 51, 0.2);
-            }
-          }
-          input[type=submit] {
-            padding: 14px 14px;
-            border-radius: 20px;
-          }
-        }
-      }
-    }
-  }
+/* Wrapper */
+.wrapper {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.trends,
+.friend-hint {
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
   .right-side {
-    position: relative;
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main,
+  .home-header {
     width: 100%;
-    margin: 0px 0 0 14px;
-
-    @media screen and (max-width: 990px) {
-      display: none;
-    }
-
-    .right-side-container {
-      position: fixed;
-
-    }
+    padding: 0 10px;
   }
 }
