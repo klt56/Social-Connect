@@ -2,10 +2,12 @@
   font-family: "font-1";
   src: url(./assets/fonts/JosefinSans-ExtraLight.ttf);
 }
+
 @font-face {
   font-family: "font-2";
   src: url(./assets/fonts/JosefinSans-Regular.ttf);
 }
+
 @font-face {
   font-family: "font-3";
   src: url(./assets/fonts/JosefinSans-Bold.ttf);
@@ -36,10 +38,12 @@ $shadow: rgb(219, 218, 218);
     background: $color-1;
   }
 }
+
 a,
 a:visited {
   color: $color-3;
 }
+
 input,
 textarea {
   resize: none;
@@ -48,15 +52,17 @@ textarea {
   font-family: $font-1;
   background: $white;
 }
+
 textarea {
   &:focus {
     box-shadow: 0 0 4px rgba(0, 22, 44, 0.1);
   }
 }
+
 button,
 input[type="submit"] {
   background: $color-2;
-  color: $color-1;
+  color: black;
   font-family: $font-3;
   cursor: pointer;
   transition: 0.2s;
@@ -71,11 +77,13 @@ input[type="submit"] {
     color: $color-2;
   }
 }
+
 input[type="checkbox"] {
   box-shadow: none;
   width: 20px;
   margin: 10px 0;
 }
+
 i {
   transition: 0.15s;
 
@@ -83,16 +91,19 @@ i {
     transform: scale(1.1);
   }
 }
+
 body {
   font-family: $font-2;
   line-height: 1.4rem;
   background: $white;
   color: $color-3;
 }
+
 .error {
   color: red;
   font-weight: bold;
 }
+
 .success {
   color: green;
   font-weight: bold;

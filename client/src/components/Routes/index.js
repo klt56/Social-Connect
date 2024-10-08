@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Navigate, Routes, Route } from 'react-router-d
 import Home from '../../pages/Home';
 import Profil from '../../pages/Profil';
 import Trending from '../../pages/Trending';
-import Navbar from '../Navbar';
 import Communaute from '../../pages/communaute';
+import Matchmaking from '../../pages/matchmaking';
 
 const index = () => {
     return (
@@ -15,6 +15,7 @@ const index = () => {
                 <Route path="/profil" element={<Profil />} />
                 <Route path="/trending" element={<Trending />} />
                 <Route path="/communaute" element={<Communaute />} />
+                <Route path="/matchmaking" element={<Matchmaking />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </Router>

@@ -1,0 +1,50 @@
+.matchmaking-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.matchmaking-bloc-principal {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.matchmaking-card {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.matchmaking-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.matchmaking-name {
+    font-weight: bold;
+}
+
+.matchmaking-members {
+    font-size: 0.9em;
+}
+
+.join-button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 15px;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}

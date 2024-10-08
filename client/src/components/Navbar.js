@@ -23,12 +23,13 @@ const Navbar = () => {
                     <NavLink to="/" exact activeClassName="active-left-nav">
                         Accueil
                     </NavLink>
-                    <NavLink to="/trending" exact activeClassName="active-left-nav">
+                    <NavLink to="/matchmaking" exact activeClassName="active-left-nav">
                         Matchmaking
                     </NavLink>
                     <NavLink to="/communaute" exact activeClassName="active-left-nav">
                         Communautés
                     </NavLink>
+
                 </div>
                 {uid ? (
                     <ul>
