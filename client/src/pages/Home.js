@@ -16,6 +16,8 @@ const Home = () => {
       <Navbar />
       <div></div>
       <div className="main">
+        <h1>Accueil</h1>
+        <p>Rencontre un tas de personne atteint de ta maladie !</p>
         <div className="home-header">
           {uid ? <NewPostForm /> : <Log signin={true} signup={false} />}
         </div>

@@ -26,7 +26,7 @@ const Navbar = () => {
                     <NavLink to="/matchmaking" exact activeClassName="active-left-nav">
                         Matchmaking
                     </NavLink>
-                    <NavLink to="/communaute" exact activeClassName="active-left-nav">
+                    <NavLink to="/communaute" activeClassName="active-left-nav">
                         Communautés
                     </NavLink>
 

@@ -29,11 +29,13 @@ const Matchmaking = () => {
                 {communities.map((matchmaking, index) => (
                     <MatchmakingCard
                         key={index}
+
                         name={matchmaking.name}
                         members={matchmaking.members}
                         maxMembers={matchmaking.maxMembers}
                     />
                 ))}
+
             </div>
         </div>
     );

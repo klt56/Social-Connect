@@ -24,7 +24,6 @@ const UpdateProfil = () => {
 
   return (
     <div className="profil-container">
-      <LeftNav />
       <h1> Profil de {userData.pseudo}</h1>
       <div className="update-container">
         <div className="left-part">
@@ -63,56 +62,56 @@ const UpdateProfil = () => {
       </div>
       {followingPopup && (
         <div className="popup-profil-container">
-        <div className="modal">
-         <h3>Abonnements</h3>
-         <span className="cross" onClick={() => setFollowingPopup(false)}>&#10005;</span>
-         <ul>
-          {usersData.map((user) => {
-            for (let i = 0; i < userData.following.length; i++) {
-              if (user._id === userData.following[i]) {
-                return (
-                  <li key={user._id}>
-                    <img src={user.picture} alt="user-pic"/>
-                    <h4>{user.pseudo}</h4>
-                    <div className="follow-handler">
-                    <FollowHandler idToFollow={user._id} type={'suggestion'} />
-                    </div>
-                  </li>
-                );
-              }
-            }
-            return null;
-          })}
-         </ul>
-         </div>
+          <div className="modal">
+            <h3>Abonnements</h3>
+            <span className="cross" onClick={() => setFollowingPopup(false)}>&#10005;</span>
+            <ul>
+              {usersData.map((user) => {
+                for (let i = 0; i < userData.following.length; i++) {
+                  if (user._id === userData.following[i]) {
+                    return (
+                      <li key={user._id}>
+                        <img src={user.picture} alt="user-pic" />
+                        <h4>{user.pseudo}</h4>
+                        <div className="follow-handler">
+                          <FollowHandler idToFollow={user._id} type={'suggestion'} />
+                        </div>
+                      </li>
+                    );
+                  }
+                }
+                return null;
+              })}
+            </ul>
+          </div>
         </div>
-        )}
-             {followersPopup && (
+      )}
+      {followersPopup && (
         <div className="popup-profil-container">
-        <div className="modal">
-         <h3>Abonnés</h3>
-         <span className="cross" onClick={() => setFollowersPopup(false)}>&#10005;</span>
-         <ul>
-          {usersData.map((user) => {
-            for (let i = 0; i < userData.followers.length; i++) {
-              if (user._id === userData.followers[i]) {
-                return (
-                  <li key={user._id}>
-                    <img src={user.picture} alt="user-pic"/>
-                    <h4>{user.pseudo}</h4>
-                    <div className="follow-handler">
-                    <FollowHandler idToFollow={user._id}  type={'suggestion'}/>
-                    </div>
-                  </li>
-                );
-              }
-            }
-            return null;
-          })}
-         </ul>
-         </div>
+          <div className="modal">
+            <h3>Abonnés</h3>
+            <span className="cross" onClick={() => setFollowersPopup(false)}>&#10005;</span>
+            <ul>
+              {usersData.map((user) => {
+                for (let i = 0; i < userData.followers.length; i++) {
+                  if (user._id === userData.followers[i]) {
+                    return (
+                      <li key={user._id}>
+                        <img src={user.picture} alt="user-pic" />
+                        <h4>{user.pseudo}</h4>
+                        <div className="follow-handler">
+                          <FollowHandler idToFollow={user._id} type={'suggestion'} />
+                        </div>
+                      </li>
+                    );
+                  }
+                }
+                return null;
+              })}
+            </ul>
+          </div>
         </div>
-        )}
+      )}
     </div>
   );
 };
